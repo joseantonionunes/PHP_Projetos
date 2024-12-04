@@ -15,6 +15,6 @@ return [
     [
         'usuario' => 'usuario3@gmail.com',
         'senha' => password_hash('senha003', PASSWORD_DEFAULT)
-    ],
+    ]
 
 ];

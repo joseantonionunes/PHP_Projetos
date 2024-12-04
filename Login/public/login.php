@@ -16,9 +16,9 @@ defined('CONTROL') or die('Acesso negado!');
     // verifica se o usuário e password são válidos
     if(empty($erro)){
 
-        $usuario = require_once __DIR__ . '/../inc/usuario.php';
+        $usuarios = require_once __DIR__ . '/../inc/usuario.php';
         
-        foreach($usuario as $user){
+        foreach($usuarios as $user){
             if($user['usuario'] == $usuario && password_verify($senha, $user['senha'])){
 
                 // efetua o login
