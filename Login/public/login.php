@@ -37,29 +37,77 @@ defined('CONTROL') or die('Acesso negado!');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<body>
-    
-    <form action="index.php?rota=login" method="post">
-        <h3>Login</h3>
-        <div>
-            <label for="usuario">Usuário:</label>
-            <input type="text" name="usuario" id="usuario">
-        </div>
-        <div>
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha">
-        </div>
-        <div>
-            <button type="submit">Entrar</button>
-        </div>
-    </form>
+<Style>
 
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    header{
+        text-align: center;
+        height: 100px;
+        background-color: whitesmoke;
+        color: black;
+        margin-bottom: 150px;
+        h1{
+            text-align: center;
+        }
+    }
+
+    main{
+        background-color: red;
+        border-radius: 10px;
+        width: 220px;
+        margin: auto;
+        form{
+            text-align: center;
+            
+            
+            h3{
+                font-size: 25px;
+            }
+            div{
+                padding-top: 10px;
+                button{
+                    padding: 15px;
+                    border-radius: 15px;
+                    background-color: black;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+</Style>
+<body>
+
+    <header>
+        <h1>Login</h1>
+    </header>
+    <main>
+
+        <form action="index.php?rota=login" method="post">
+            <h3>Login</h3>
+            <div>
+                <label for="usuario">Usuário:</label>
+                <input type="text" name="usuario" id="usuario">
+            </div>
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha">
+            </div>
+            <div>
+                <button type="submit">Entrar</button>
+            </div>
+        </form>
+    </main>
     <?php if(!empty($erro)): ?>
         <p style="color: red"><?= $erro ?></p>
     <?php endif; ?>
