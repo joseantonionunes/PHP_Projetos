@@ -55,32 +55,41 @@ defined('CONTROL') or die('Acesso negado!');
         height: 100px;
         background-color: whitesmoke;
         color: black;
-        margin-bottom: 150px;
+        /* margin-bottom: 150px; */
         h1{
             text-align: center;
         }
     }
 
     main{
-        background-color: red;
-        border-radius: 10px;
-        width: 220px;
-        margin: auto;
-        form{
-            text-align: center;
+        min-height: 90vh;
+        background-image: url(../img/2.png);
+        position: relative;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
-            
-            h3{
-                font-size: 25px;
-            }
-            div{
-                padding-top: 10px;
-                button{
-                    padding: 15px;
-                    border-radius: 15px;
-                    background-color: black;
-                    color: white;
-                    cursor: pointer;
+            form{
+                text-align: center;
+                background-color: red;
+                border-radius: 10px;
+                width: 240px;
+                height: 150px;
+                position: absolute;
+                margin-top: 500px;
+                h3{
+                    font-size: 25px;
+                }
+                div{
+                    padding-top: 10px;
+                    button{
+                        padding: 15px;
+                        border-radius: 15px;
+                        background-color: black;
+                        color: white;
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -92,21 +101,22 @@ defined('CONTROL') or die('Acesso negado!');
         <h1>Login</h1>
     </header>
     <main>
-
-        <form action="index.php?rota=login" method="post">
-            <h3>Login</h3>
-            <div>
-                <label for="usuario">Usuário:</label>
-                <input type="text" name="usuario" id="usuario">
-            </div>
-            <div>
-                <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha">
-            </div>
-            <div>
-                <button type="submit">Entrar</button>
-            </div>
-        </form>
+        <div>
+            <form action="index.php?rota=login" method="post">
+                <h3>Login</h3>
+                <div>
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" name="usuario" id="usuario">
+                </div>
+                <div>
+                    <label for="senha"> Senha: </label>
+                    <input type="password" name="senha" id="senha">
+                </div>
+                <div>
+                    <button type="submit">Entrar</button>
+                </div>
+            </form>
+        </div>
     </main>
     <?php if(!empty($erro)): ?>
         <p style="color: red"><?= $erro ?></p>
